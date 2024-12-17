@@ -19,7 +19,7 @@ const Mobile = () => {
                   <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
                     Abbonamenti
                   </h2>
-                  <p className="mt-4 text-white">
+                  <p className="my-5 text-white">
                     Scopri le nostre offerte esclusive per abbonamenti Internet
                     ultra-veloci e pacchetti di chiamate senza limiti, pensate
                     per tenerti sempre connesso al miglior prezzo. Scegli la
@@ -28,7 +28,7 @@ const Mobile = () => {
                   </p>
                 </header>
                 <div className="my-2">
-                <Button href="/mobile" name="Tutte le offerte voce e internet"/>
+                <Button href="/offers" name="Tutte le offerte"/>
                 </div>
               </div>
             </div>
@@ -62,7 +62,7 @@ const Mobile = () => {
                 La nostra rete mobile ?
               </h2>
 
-              <p className="mt-4 text-gray-500">
+              <p className="my-5 text-gray-500">
                 La nostra rete mobile è la più avanzata e affidabile del
                 territorio, garantendo connessioni veloci e stabili ovunque tu
                 sia. Con copertura su larga scala, puoi contare su una

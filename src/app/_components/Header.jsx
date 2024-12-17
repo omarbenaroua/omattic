@@ -28,7 +28,9 @@ const Header = () => {
                   <NavLinks name={"Home"} href="/" />
                   <NavLinks name={"Mobile"} href="/mobile" />
                   <NavLinks name={"Internet"} href="/internet" />
+                  <NavLinks name={"Offerte"} href="/offers" />
                   <NavLinks name={"Chi siamo"} href="/info" />
+                  
                 </ul>
               </nav>
 
@@ -45,14 +47,15 @@ const Header = () => {
                 <div className="relative"></div>
                 {menu && (
                   <div
-                    className="absolute z-10 top-[60px] right-8 w-40 bg-primary rounded-md border border-secondary shadow-lg"
+                    className="absolute z-10 top-[60px] right-8 w-40 bg-primary rounded-md border border-primary shadow-lg"
                     role="menu"
                   >
-                    <div className="p-2">
-                      <ul className="space-y-3 p-4">
+                    <div className="p-1">
+                      <ul className="space-y-4 p-4 text-center">
                         <NavLinks name={"Home"} href="/" />
                         <NavLinks name={"Mobile"} href="/mobile" />
                         <NavLinks name={"Internet"} href="/internet" />
+                        <NavLinks name={"Offerte"} href="/offers" />
                         <NavLinks name={"Chi siamo"} href="/info" />
                       </ul>
                     </div>

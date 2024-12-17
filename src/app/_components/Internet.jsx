@@ -14,7 +14,7 @@ const Internet = () => {
           </h2>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
             <div className="lg:col-span-4 lg:py-8">
-              <ul className="grid grid-cols-3 gap-4">
+              <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {Data.map((info) => {
                   return (
                     <>
@@ -50,23 +50,24 @@ const Internet = () => {
 
               <div className="p-8 sm:p-16 lg:p-24">
                 <h2 className="text-2xl font-bold sm:text-3xl text-primary">
-                  La nostra rete mobile
+                  La nostra rete Internet a casa
                 </h2>
 
-                <p className="mt-4 text-gray-100">
-                  La nostra rete mobile è la più avanzata e affidabile del
-                  territorio, offrendo connessioni veloci e stabili ovunque ti
-                  trovi. Con una copertura capillare, garantiamo che tu possa
-                  navigare senza interruzioni anche nelle aree più remote. Le
-                  nostre velocità di navigazione elevate ti permettono di fruire
-                  di contenuti in streaming e di lavorare in modo fluido, mentre
-                  i sistemi di protezione avanzati assicurano la massima
-                  sicurezza per i tuoi dati. Scegli una rete mobile che offre
-                  non solo affidabilità, ma anche un’assistenza clienti
-                  dedicata, pronta a risolvere ogni tua esigenza in tempo reale.
+                <p className="my-5 text-gray-100">
+                  La nostra rete Internet a casa è progettata per offrirti
+                  velocità straordinarie e una connessione stabile in ogni
+                  momento. Grazie alla tecnologia fibra ottica di ultima
+                  generazione, garantiamo performance elevate per streaming in
+                  4K, gaming online e smart working senza interruzioni. La
+                  copertura estesa e l'affidabilità della nostra rete ti
+                  permettono di connetterti da ogni angolo della tua casa,
+                  mentre i sistemi di sicurezza avanzati proteggono la tua
+                  navigazione e i tuoi dati. Con un'assistenza clienti sempre
+                  disponibile, ti offriamo la tranquillità di una connessione su
+                  cui puoi davvero contare.
                 </p>
 
-                <Button href="/internet" name="Tutte le offerte internet" />
+                <Button href="/offers" name="Tutte le offerte" />
               </div>
             </div>
           </div>

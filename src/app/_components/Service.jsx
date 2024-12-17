@@ -27,7 +27,7 @@ const Service = () => {
             })}
           </div>
           <div className="mt-12 text-center">
-          <ButtonSecondary name="Chi siamno"/>
+          <ButtonSecondary name="Chi siamo" href="/info"/>
           </div>
         </div>
       </section>
