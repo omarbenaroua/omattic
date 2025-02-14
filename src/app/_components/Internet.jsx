@@ -1,10 +1,25 @@
+"use client";
 import Data from "../_data/InternetData";
 import ProductBox from "../_elements/ProductBox";
 import { Button } from "../_elements/Buttons";
 import Image from "next/image";
 import img from "../_Images/beeac42e-4a81-42ea-9c6d-68bb422d1a83.png";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Internet = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const xTransformimage = useTransform(
+    scrollYProgress,
+    [0, 0.4],
+    ["-200%", "0%"]
+  );
+
   return (
     <div>
       <section className="bg-primary">
@@ -31,9 +46,14 @@ const Internet = () => {
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8" ref={ref}>
           <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
-            <div className="relative z-10 lg:py-16">
+            <motion.div
+              className="relative z-10 lg:py-16"
+              style={{
+                x: xTransformimage,
+              }}
+            >
               <div className="relative h-64 sm:h-80 lg:h-full">
                 <Image
                   src={img}
@@ -43,7 +63,7 @@ const Internet = () => {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
-            </div>
+            </motion.div>
 
             <div className="relative flex items-center bg-secondary">
               <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-secondary"></span>

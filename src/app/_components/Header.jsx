@@ -11,8 +11,7 @@ const Header = () => {
   const openMenu = () => (menu ? setMenu(false) : setMenu(true));
 
   return (
-    <div>
-      <header className=" bg-primary">
+    <div className=" bg-primary fixed z-30 w-full">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -65,7 +64,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </header>
     </div>
   );
 };

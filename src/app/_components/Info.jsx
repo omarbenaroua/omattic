@@ -1,47 +1,52 @@
+"use client";
 import Image from "next/image";
 import Cover from "../_Images/beeac42e-4a81-42ea-9c6d-68bb422d1a83.png";
 import Testimonial from "../_elements/Testimonial";
 import { Button } from "../_elements/Buttons";
-import Gif from "../_Images/Cloud Data Analysis.gif"
-import Img from "../_Images/pretty-woman-posing-fair.jpg"
-import Img2 from "../_Images/beautiful-optical-fiber-detail.jpg"
-
+import Gif from "../_Images/Cloud Data Analysis.gif";
+import Img from "../_Images/5G.webp";
+import Img2 from "../_Images/cover-info.jpg";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Info = () => {
-  return (
-    <div>
-      <section className="overflow-hidden bg-secondary sm:grid sm:grid-cols-2 sm:items-center">
-        <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-          <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
-              Omattic
-            </h2>
-            <p className=" md:mt-4 md:block p-5">La tua connessione veloce, stabile e senza limiti inizia da qui.</p>
-            <div className=" flex justify-center space-x-3">
-              <Button name="Mobile" href="/mobile" />
-              <Button name="Internet" href="/internet" />
-            </div>
-          </div>
-        </div>
-        <Image
-          src={Cover}
-          alt="Cover"
-          width={3000}
-          height={3000}
-          className="sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
-        />
-      </section>
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
 
-      <section>
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+  const xTransformimageleft = useTransform(
+    scrollYProgress,
+    [0, 0.6],
+    ["200%", "0%"]
+  );
+  const xTransformimageright = useTransform(
+    scrollYProgress,
+    [0, 0.3],
+    ["-200%", "0%"]
+  );
+  const xTransformimage1 = useTransform(
+    scrollYProgress,
+    [0, 0.4],
+    ["200%", "0%"]
+  );
+  const xTransformimage2 = useTransform(
+    scrollYProgress,
+    [0, 0.5],
+    ["200%", "0%"]
+  );
+  return (
+    <div ref={ref} className="bg-primary">
+        <div className="mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
             <div>
               <div className="max-w-lg md:max-w-none">
-                <h2 className="text-2xl font-semibold text-secondary sm:text-3xl">
+                <h2 className="text-2xl font-semibold text-secondary sm:text-6xl">
                   Chi Siamo ?
                 </h2>
 
-                <p className="mt-4 text-gray-500">
+                <p className="mt-4 text-gray-500 text-sm sm:text-lg">
                   Connettiamo il futuro, oggi: offriamo soluzioni internet fibra
                   ad alta velocità e abbonamenti mobile affidabili per garantire
                   a tutti una connessione stabile, sicura e senza limiti,
@@ -51,19 +56,17 @@ const Info = () => {
             </div>
 
             <div>
-            <Image
-          src={Gif}
-          alt="Gif"
-          width={3000}
-          height={3000}
-          className=" rounded"
-        />
+              <Image
+                src={Cover}
+                alt="Cover"
+                width={3000}
+                height={3000}
+                className=" rounded radius-2xl"
+              />
             </div>
           </div>
         </div>
-      </section>
 
-      <section>
         <div className="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div className="bg-secondary p-8 md:p-12 lg:px-16 lg:py-24">
@@ -100,32 +103,45 @@ const Info = () => {
                 </p>
 
                 <div className="mt-4 md:mt-8">
-                Tutte le offerte voce e internet
-                <Button name="Tutte le offerte voce e internet" href="/offers" />
+                  Tutte le offerte voce e internet
+                  <Button
+                    name="Tutte le offerte voce e internet"
+                    href="/offers"
+                  />
                 </div>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
-                          <Image
-          src={Img}
-          alt="Img"
-          width={3000}
-          height={3000}
-          className=" h-40 w-full object-cover sm:h-56 md:h-full"
-        />
-
-<Image
-          src={Img2}
-          alt="Img"
-          width={3000}
-          height={3000}
-          className=" h-40 w-full object-cover sm:h-56 md:h-full"
-        />
+              <motion.div
+                style={{
+                  x: xTransformimage1,
+                }}
+              >
+                <Image
+                  src={Img}
+                  alt="Img"
+                  width={3000}
+                  height={3000}
+                  className=" h-40 w-full object-cover sm:h-56 md:h-full"
+                />
+              </motion.div>
+              <motion.div
+                style={{
+                  x: xTransformimage2,
+                }}
+              >
+                <Image
+                  src={Img2}
+                  alt="Img"
+                  width={3000}
+                  height={3000}
+                  className=" h-40 w-full object-cover sm:h-56 md:h-full"
+                />
+              </motion.div>
             </div>
           </div>
         </div>
-      </section>
       <Testimonial />
     </div>
   );
