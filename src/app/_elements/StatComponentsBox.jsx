@@ -2,7 +2,7 @@ import React from "react";
 
 const StatComponentsBox = (props) => {
   return (
-    <div className="flex flex-col rounded-lg border px-4 py-8 text-center">
+    <div className="flex flex-col rounded-lg border px-4 py-8 text-center bg-gray-900">
       <dt className="order-last text-lg font-medium text-gray-500">
         {props.title}
       </dt>

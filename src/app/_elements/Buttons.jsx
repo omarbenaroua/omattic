@@ -8,7 +8,7 @@ export const Button = (props) => {
         href={props.href}
         target={props.target}
       >
-        <p className="block rounded bg-primary px-6 py-2 md:px-12 md:py-3 transition-transform active:border-white active:bg-white group-hover:-translate-x-1 group-hover:-translate-y-1">
+        <p className="block rounded bg-gray-900 px-6 py-2 md:px-12 md:py-3 transition-transform active:border-white active:bg-white group-hover:-translate-x-1 group-hover:-translate-y-1">
           {props.name}
         </p>
       </a>

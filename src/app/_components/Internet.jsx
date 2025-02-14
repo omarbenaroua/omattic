@@ -32,21 +32,24 @@ const Internet = () => {
               <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {Data.map((info) => {
                   return (
-                    <>
+                    <li key={info.id}>
                       <ProductBox
                         price={info.price}
                         text={info.text}
                         img={info.img}
                         href="/internetCheckout"
                       />
-                    </>
+                    </li>
                   );
                 })}
               </ul>
             </div>
           </div>
         </div>
-        <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8" ref={ref}>
+        <div
+          className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8"
+          ref={ref}
+        >
           <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
             <motion.div
               className="relative z-10 lg:py-16"

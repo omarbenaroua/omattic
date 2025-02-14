@@ -62,14 +62,14 @@ const Mobile = () => {
               <ul className="grid grid-cols-2 gap-4">
                 {Data.map((info) => {
                   return (
-                    <>
+<li key={info.id}>
                       <ProductBox
                         price={info.price}
                         text={info.text}
                         img={info.img}
                         href="/mobileCheckout"
                       />
-                    </>
+</li>
                   );
                 })}
               </ul>

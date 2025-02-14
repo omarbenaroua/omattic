@@ -8,12 +8,12 @@ import Whatsapp from "../_Images/whatsapp.png";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-white">
+      <footer className="bg-gray-900">
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
               <Image src={Logo} alt="Logo" width={300} height={300} />
-              <p className="mt-6 max-w-md text-center leading-relaxed text-gray-500 sm:max-w-xs sm:text-left">
+              <p className="mt-6 max-w-md text-center leading-relaxed text-gray-300 sm:max-w-xs sm:text-left">
                 La rete su cui puoi contare per il lavoro, lo studio e
                 l'intrattenimento.
               </p>
@@ -45,7 +45,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:col-span-2">
               <div className="text-center sm:text-left">
                 <p className="text-lg font-medium text-secondary">Contatti</p>
-                <ul className="mt-8 space-y-4 text-sm text-primary">
+                <ul className="mt-8 space-y-4 text-sm text-gray-300">
                   <p>Via venezia 1</p>
                   <p>6500 Bellinzona</p>
                   <p>091 000 00 00</p>
@@ -55,8 +55,8 @@ const Footer = () => {
               </div>
 
               <div className="text-center sm:text-left">
-                <p className="text-lg font-medium text-primary">Orari</p>
-                <ul className="mt-8 space-y-4 text-sm text-primary">
+                <p className="text-lg font-medium text-secondary">Orari</p>
+                <ul className="mt-8 space-y-4 text-sm text-gray-300">
                   <p>Lunedì - Venerdi</p>
                   <p>9:00-12:00</p>
                   <p>14:00-18:00</p>
@@ -66,8 +66,8 @@ const Footer = () => {
               </div>
 
               <div className="text-center sm:text-left">
-                <p className="text-lg font-medium text-primary">Prodotti</p>
-                <ul className="mt-8 space-y-4 text-sm text-primary">
+                <p className="text-lg font-medium text-secondary">Prodotti</p>
+                <ul className="mt-8 space-y-4 text-sm text-gray-300">
                   <p>Mobile</p>
                   <p>Internet</p>
                   <p>Telefonia fissa</p>
@@ -79,7 +79,7 @@ const Footer = () => {
 
           <div className="mt-12 border-t border-gray-100 pt-6">
             <div className="text-center sm:flex justify-center">
-              <p className="mt-4 text-sm text-gray-500 sm:order-first sm:mt-0">
+              <p className="mt-4 text-sm text-secondary sm:order-first sm:mt-0">
                 &copy; 2024 Omar ben aroua
               </p>
             </div>

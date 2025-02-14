@@ -6,7 +6,7 @@ const ServiceBox = (props) => {
   return (
     <div>
         <a
-        className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-secondary hover:shadow-secondary"
+        className="block bg-gray-900 rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-secondary hover:shadow-secondary"
         href="/"
       >
         <Image src={props.img} alt='Service Box' width={300} height={300} className="size-20"/>

@@ -15,17 +15,6 @@ const Info = () => {
     target: ref,
     offset: ["start end", "end start"],
   });
-
-  const xTransformimageleft = useTransform(
-    scrollYProgress,
-    [0, 0.6],
-    ["200%", "0%"]
-  );
-  const xTransformimageright = useTransform(
-    scrollYProgress,
-    [0, 0.3],
-    ["-200%", "0%"]
-  );
   const xTransformimage1 = useTransform(
     scrollYProgress,
     [0, 0.4],
